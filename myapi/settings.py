@@ -14,6 +14,7 @@ import json
 from django.core.exceptions import ImproperlyConfigured
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -95,10 +96,10 @@ WSGI_APPLICATION = 'myapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'fruitsinfo',
         'USER': get_secret("USER"),
         'PASSWORD': get_secret("PASSWORD"),
-        'HOST': 'localhost',
+        'HOST': get_secret("HOST"),
         'PORT': '5432',
     }
 }
