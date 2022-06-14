@@ -1,6 +1,7 @@
 from django.urls import path, include
-from .views import helloAPI
+from .views import fruitsInfoList, FruitInfo
 
 urlpatterns = [
-    path("hello/", helloAPI),
+    path("", fruitsInfoList),
+    path("<int:pk>/", FruitInfo.as_view()),
 ]
