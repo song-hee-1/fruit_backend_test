@@ -1,7 +1,7 @@
 from django.urls import path, include
-from .views import fruitsInfoList, FruitInfo
+from .views import FruitsInfoList, FruitInfo
 
 urlpatterns = [
-    path("", fruitsInfoList),
+    path("", FruitsInfoList.as_view()),
     path("<int:pk>/", FruitInfo.as_view()),
 ]

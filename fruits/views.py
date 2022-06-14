@@ -12,11 +12,11 @@ def helloAPI(request):
     return Response("Hello World!")
 
 
-@api_view(['Get'])
-def fruitsInfoList(request):
-    total_fruits_info = Info.objects.all()
-    serializer = InfoSerializer(total_fruits_info, many=True)
-    return Response(serializer.data)
+
+class FruitsInfoList(generics.ListAPIView):
+    queryset = Info.objects.all()
+    serializer_class = InfoSerializer
+
 
 
 class FruitInfo(generics.RetrieveAPIView):
