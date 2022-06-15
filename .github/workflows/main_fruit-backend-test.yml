@@ -60,4 +60,8 @@ jobs:
         with:
           app-name: 'fruit-backend-test'
           slot-name: 'Production'
+<<<<<<< HEAD
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1D34A9EF553F4593AA753EFF16306392 }}
+=======
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D9C5A4A8142840FC919630E8A4432409 }}
+>>>>>>> 8b1cd7994f25612cd64fbfa7a4993209d17778a6
