@@ -7,4 +7,4 @@ class Info(models.Model):
     name = models.CharField(max_length=10)
     season = models.CharField(max_length=20)
     description = models.CharField(max_length=100)
-    image = models.ImageField(upload_to="", blank=True, null=True)
+    image = models.CharField(max_length=100, blank=True, null=True)
