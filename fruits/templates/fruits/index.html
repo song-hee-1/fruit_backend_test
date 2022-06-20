@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🍎🍋🥝</title>
+</head>
+<body>
+    <h1>과일 정보📝</h1>
+    {% if fruits_info_list %}
+    <ul>
+        {% for info in fruits_info_list %}
+          <li>
+                  {{ info.name }} {{ info.season }} {{ info.description }}
+              <div>
+                  <img src= {{info.image}} style="width: 25vw; min-width: 140px;"/>
+              </div>
+          </li>
+        {% endfor %}
+    </ul>
+      {% else %}
+        <p>There are no fruits info in database.</p>
+      {% endif %}
+</body>
+</html>
